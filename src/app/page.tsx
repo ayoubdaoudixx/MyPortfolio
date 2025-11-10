@@ -94,7 +94,6 @@ export default function Page() {
                 logoUrl={education.logoUrl}
                 altText={education.school}
                 title={education.school}
-                name={education.name}
                 subtitle={education.degree}
                 period={`${education.start} - ${education.end}`}
               />
