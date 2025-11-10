@@ -206,7 +206,7 @@ export function AIChatbot() {
                 <MessageCircle className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="font-semibold text-sm">Ayoub's AI Assistant</h3>
+                <h3 className="font-semibold text-sm">Ayoub&apos;s AI Assistant</h3>
                 <p className="text-xs opacity-90">Always here to help</p>
               </div>
             </div>
