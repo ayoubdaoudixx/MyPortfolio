@@ -213,7 +213,7 @@ export const DATA = {
       location: "Huawei Certification",
       description:
         "Professional certification in 5G networks and services.",
-      image: "/Huawei5G.png",
+      image: "/huawei5G.png",
       links: [
         {
           title: "View Certification",
