@@ -160,7 +160,7 @@ export function AIChatbot() {
       }`}>
         {/* View Resume Button */}
         <Button
-          onClick={() => window.open('/resume.pdf', '_blank')}
+          onClick={() => window.open('/Ayoub_Daoudi_Resume.pdf', '_blank')}
           className="h-10 px-4 md:h-11 md:px-5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground flex items-center gap-2"
           aria-label="View Resume"
         >
@@ -172,7 +172,7 @@ export function AIChatbot() {
         <Button
           onClick={() => {
             const link = document.createElement('a');
-            link.href = '/resume.pdf';
+            link.href = '/Ayoub_Daoudi_Resume.pdf';
             link.download = 'Ayoub_Daoudi_Resume.pdf';
             link.click();
           }}

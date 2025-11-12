@@ -67,17 +67,47 @@ export default function Page() {
                 key={work.company}
                 logoUrl={work.logoUrl}
                 altText={work.company}
-                title={work.company}
-                subtitle={work.title}
+                title={work.title}
+                subtitle={work.company}
                 href={work.href}
                 badges={work.badges}
                 period={`${work.start} - ${work.end ?? "Present"}`}
+                location={work.location}
                 description={work.description}
               />
             </BlurFade>
           ))}
         </div>
       </section>
+
+      <section id="otherwork">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold">Other Backgrounds</h2>
+          </BlurFade>
+          {DATA.otherwork.map((otherwork, id) => (
+            <BlurFade
+              key={otherwork.company}
+              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+            >
+              <ResumeCard
+                key={otherwork.company}
+                logoUrl={otherwork.logoUrl}
+                altText={otherwork.company}
+                title={otherwork.title}
+                subtitle={otherwork.company}
+                href={otherwork.href}
+                badges={otherwork.badges}
+                period={`${otherwork.start} - ${otherwork.end ?? "Present"}`}
+                location={otherwork.location}
+                description={otherwork.description}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+
+
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
@@ -165,14 +195,13 @@ export default function Page() {
                   Certifications
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                  Every new Day Comes with new knowledge
+                  New Day, New Skills to Learn
                 </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   I’m passionate about continuous learning and constantly seek opportunities 
-                  to expand my knowledge. Each certification I pursue reflects my curiosity, 
-                  dedication, and drive to stay up to date with the latest technologies 
-                  and best practices in my field. I see learning as a lifelong journey that 
-                  fuels both my personal growth and professional development..
+                  to expand my knowledge. I see learning as a lifelong journey that 
+                  fuels both my personal growth, professional development, and reflects my curiosity, 
+                  dedication
                 </p>
               </div>
             </div>
@@ -209,15 +238,14 @@ export default function Page() {
                 Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Want to chat? Just shoot me a dm{" "}
+                Have a question?{" "}
                 <Link
-                  href={DATA.contact.social.X.url}
+                  href={DATA.contact.social.LinkedIn.url}
                   className="text-blue-500 hover:underline"
                 >
-                  with a direct question on twitter
+                  Drop me a DM on Linkedin
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                 and I&apos;ll do my best to get back to you soon. See you there then!
               </p>
             </div>
           </BlurFade>
