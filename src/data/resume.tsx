@@ -42,6 +42,7 @@ export const DATA = {
     "Streamlit",
     "Dataiku",
     "MLOps",
+    "SalesForce",
   ],
 
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
@@ -215,7 +216,7 @@ export const DATA = {
       links: [
         { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/ayoubdaoudixx/bankruptcy-predictor-ML-web-app" },
       ],
-      image: "/bankruptcy.png",
+      image: "/project1.png",
     },
     {
       title: "MASI Index Performance Prediction",

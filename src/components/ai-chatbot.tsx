@@ -14,6 +14,29 @@ export function AIChatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(true);
+
+  // Add animation keyframes
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 0.5s ease-out forwards;
+      }
+    `;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -32,6 +55,15 @@ export function AIChatbot() {
       inputRef.current.focus();
     }
   }, [isOpen]);
+
+  // Show welcome message when component mounts and hide after 10s
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowWelcome(false);
+    }, 10000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // Initialize with greeting message when first opened
   useEffect(() => {
@@ -123,14 +155,41 @@ export function AIChatbot() {
     <>
       {/* Floating Chat Button - Bottom Right */}
       {!isOpen && (
-        <Button
-          onClick={() => setIsOpen(true)}
-          size="icon"
-          className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primary/90"
-          aria-label="Open AI Assistant"
-        >
-          <MessageCircle className="h-6 w-6" />
-        </Button>
+        <div className="fixed bottom-4 right-6 z-50 flex flex-col items-end gap-2">
+          {showWelcome && (
+            <div 
+              className="bg-primary text-primary-foreground text-sm pl-3 pr-2 py-2 rounded-lg shadow-lg max-w-xs transform transition-all duration-500 ease-out opacity-0 translate-y-2 animate-fadeInUp relative group"
+              onAnimationEnd={(e) => {
+                e.currentTarget.classList.add('opacity-100', 'translate-y-0');
+              }}
+            >
+              <div className="flex items-center justify-between">
+                <span>Need help? Ask me anything!</span>
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowWelcome(false);
+                  }}
+                  className="ml-2 p-1 rounded-full hover:bg-primary-foreground/20 transition-colors duration-200"
+                  aria-label="Close message"
+                >
+                  <X className="h-3.5 w-3.5" />
+                </button>
+              </div>
+            </div>
+          )}
+          <Button
+            onClick={() => {
+              setIsOpen(true);
+              setShowWelcome(false);
+            }}
+            size="icon"
+            className="h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primary/90 -mb-1"
+            aria-label="Open AI Assistant"
+          >
+            <MessageCircle className="h-6 w-6" />
+          </Button>
+        </div>
       )}
 
       {/* Chat Window */}
