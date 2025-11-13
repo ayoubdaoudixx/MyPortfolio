@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { MessageCircle, Send, X, Loader2, RefreshCw, Eye, Download } from "lucide-react";
+import { MessageCircle, Send, X, Loader2, RefreshCw } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 interface Message {
@@ -14,7 +14,6 @@ export function AIChatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [showButtons, setShowButtons] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -47,38 +46,6 @@ export function AIChatbot() {
     }
   }, [isOpen, messages.length]);
 
-  // Handle scroll to hide/show buttons on mobile
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Only apply on mobile/tablet (< 768px)
-      if (window.innerWidth < 768) {
-        if (currentScrollY > lastScrollY && currentScrollY > 50) {
-          // Scrolling down & past 50px
-          setShowButtons(false);
-        } else if (currentScrollY < lastScrollY) {
-          // Scrolling up
-          setShowButtons(true);
-        }
-      } else {
-        // Always show on desktop
-        setShowButtons(true);
-      }
-      
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('resize', handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleScroll);
-    };
-  }, []);
 
   const handleSendMessage = async () => {
     if (!input.trim() || isLoading) return;
@@ -154,36 +121,6 @@ export function AIChatbot() {
 
   return (
     <>
-      {/* Resume Action Buttons - Top Right (vertical on desktop, horizontal on mobile) */}
-      <div className={`fixed top-0 left-0 right-0 md:top-6 md:right-6 md:left-auto z-50 flex flex-row md:flex-col gap-2 md:gap-3 justify-center md:justify-start p-3 md:p-0 bg-background/95 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none transition-transform duration-300 ${
-        showButtons ? 'translate-y-0' : '-translate-y-full md:translate-y-0'
-      }`}>
-        {/* View Resume Button */}
-        <Button
-          onClick={() => window.open('/Ayoub_Daoudi_Resume.pdf', '_blank')}
-          className="h-10 px-4 md:h-11 md:px-5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground flex items-center gap-2"
-          aria-label="View Resume"
-        >
-          <Eye className="h-4 w-4" />
-          <span className="text-xs md:text-sm font-medium">View Resume</span>
-        </Button>
-        
-        {/* Download Resume Button */}
-        <Button
-          onClick={() => {
-            const link = document.createElement('a');
-            link.href = '/Ayoub_Daoudi_Resume.pdf';
-            link.download = 'Ayoub_Daoudi_Resume.pdf';
-            link.click();
-          }}
-          className="h-10 px-4 md:h-11 md:px-5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground flex items-center gap-2"
-          aria-label="Download Resume"
-        >
-          <Download className="h-4 w-4" />
-          <span className="text-xs md:text-sm font-medium">Download Resume</span>
-        </Button>
-      </div>
-
       {/* Floating Chat Button - Bottom Right */}
       {!isOpen && (
         <Button
@@ -289,7 +226,7 @@ export function AIChatbot() {
               </Button>
             </div>
             <p className="text-xs text-muted-foreground mt-2 text-center">
-              Powered by AI • Information from resume
+              Powered by AI
             </p>
           </div>
         </div>

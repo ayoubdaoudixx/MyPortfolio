@@ -246,7 +246,7 @@ export const DATA = {
   ],
 
   // CERTIFICATIONS SECTION — repurposed from hackathons
-  hackathons: [
+  certification: [
     {
       title: "IBM Data Science Professional Certificate",
       dates: "In Progress ...",
