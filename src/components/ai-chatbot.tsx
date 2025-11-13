@@ -40,7 +40,7 @@ export function AIChatbot() {
         {
           role: "assistant",
           content:
-            "👋 Hi! I'm Ayoub's AI Assistant. You can ask me anything about his background, projects, or skills.",
+            "👋 Hi! I'm Ayoub's AI Clone, Scary right!. You can ask me anything about his background, projects, or skills.",
         },
       ]);
     }
@@ -113,7 +113,7 @@ export function AIChatbot() {
       {
         role: "assistant",
         content:
-          "👋 Hi! I'm Ayoub's AI Assistant. You can ask me anything about his background, projects, or skills.",
+          "👋 Hi! I'm Ayoub's AI Clone, Scary right!. You can ask me anything about his background, projects, or skills.",
       },
     ]);
     setInput("");

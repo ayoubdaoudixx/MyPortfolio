@@ -62,7 +62,7 @@ ${DATA.projects
   .join("\n")}
 
 ## Certifications
-${DATA.hackathons
+${DATA.certification
   .map(
     (cert) => `
 ### ${cert.title}
