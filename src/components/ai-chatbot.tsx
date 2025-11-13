@@ -17,26 +17,31 @@ export function AIChatbot() {
   const [showWelcome, setShowWelcome] = useState(true);
 
   // Add animation keyframes
-  useEffect(() => {
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(8px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+ useEffect(() => {
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
       }
-      .animate-fadeInUp {
-        animation: fadeInUp 0.5s ease-out forwards;
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-    `;
-    document.head.appendChild(style);
-    return () => document.head.removeChild(style);
-  }, []);
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.5s ease-out forwards;
+    }
+  `;
+  document.head.appendChild(style);
+  
+  // Return a cleanup function that doesn't return anything
+  return () => {
+    document.head.removeChild(style);
+  };
+}, []);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
