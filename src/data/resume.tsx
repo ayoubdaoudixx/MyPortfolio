@@ -43,6 +43,12 @@ export const DATA = {
     "Dataiku",
     "MLOps",
     "SalesForce",
+    "Power BI",
+    "Tablaeu",
+    "SAS",
+    "Seaborn",
+    "Matplotlib",
+    "Dax",
   ],
 
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
@@ -191,6 +197,7 @@ export const DATA = {
         { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/" },
       ],
       image: "/linkedshot.png",
+      video: "/linkedshoot.mov",
     },
     {
       title: "ATS Resume Optimizer",
@@ -204,6 +211,8 @@ export const DATA = {
         { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/" },
       ],
       image: "/project2.png",
+      video: "/project2.png",
+
     },
     {
       title: "Bankrupcty Predictor",
@@ -217,6 +226,8 @@ export const DATA = {
         { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/ayoubdaoudixx/bankruptcy-predictor-ML-web-app" },
       ],
       image: "/project1.png",
+      video: "/bankruptcy.mov",
+
     },
     {
       title: "MASI Index Performance Prediction",
@@ -230,6 +241,8 @@ export const DATA = {
         { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/ayoubdaoudixx/masi-index-predictor" },
       ],
       image: "/project4.png",
+      video: "masi.mov",
+
     },
     {
       title: "Sales Insights Dashboard",
@@ -243,6 +256,8 @@ export const DATA = {
         { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/" },
       ],
       image: "/project5.png",
+      video: "/project5.png",
+
     },
   ],
 
