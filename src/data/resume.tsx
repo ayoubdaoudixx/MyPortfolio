@@ -197,7 +197,7 @@ export const DATA = {
         { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/" },
       ],
       image: "/linkedshot.png",
-      video: "/linkedshoot.mov",
+      video: "/linkedshoot.mp4",
     },
     {
       title: "ATS Resume Optimizer",
@@ -226,7 +226,7 @@ export const DATA = {
         { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/ayoubdaoudixx/bankruptcy-predictor-ML-web-app" },
       ],
       image: "/project1.png",
-      video: "/bankruptcy.mov",
+      video: "/bankruptcy.mp4",
 
     },
     {
@@ -241,7 +241,7 @@ export const DATA = {
         { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/ayoubdaoudixx/masi-index-predictor" },
       ],
       image: "/project4.png",
-      video: "masi.mov",
+      video: "masi.mp4",
 
     },
     {
