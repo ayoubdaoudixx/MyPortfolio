@@ -244,21 +244,6 @@ export const DATA = {
       video: "masi.mp4",
 
     },
-    {
-      title: "Sales Insights Dashboard",
-      href: "#",
-      dates: "2023",
-      active: true,
-      description:
-        "Created a Power BI dashboard to visualize and analyze sales trends for improved business insights.",
-      technologies: ["Power BI", "Data Analysis", "Visualization"],
-      links: [
-        { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/" },
-      ],
-      image: "/project5.png",
-      video: "/project5.png",
-
-    },
   ],
 
   // CERTIFICATIONS SECTION — repurposed from hackathons

@@ -46,7 +46,7 @@ export function ResumeButtons() {
       <div className="container mx-auto px-4 py-3 flex justify-center gap-3">
         {/* View Resume Button */}
         <Button
-          onClick={() => window.open('/Ayoub_Daoudi_Resume.pdf', '_blank')}
+          onClick={() => window.open('/CV Ayoub DAOUDI.pdf', '_blank')}
           className="h-10 px-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground flex items-center gap-2 flex-1 max-w-[200px]"
           aria-label="View Resume"
         >
@@ -58,8 +58,8 @@ export function ResumeButtons() {
         <Button
           onClick={() => {
             const link = document.createElement('a');
-            link.href = '/Ayoub_Daoudi_Resume.pdf';
-            link.download = 'Ayoub_Daoudi_Resume.pdf';
+            link.href = '/CV Ayoub DAOUDI.pdf';
+            link.download = 'CV Ayoub DAOUDI.pdf';
             link.click();
           }}
           className="h-10 px-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-background border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground flex items-center gap-2 flex-1 max-w-[200px]"
