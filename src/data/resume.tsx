@@ -250,12 +250,18 @@ export const DATA = {
   certification: [
     {
       title: "IBM Data Science Professional Certificate",
-      dates: "In Progress ...",
+      dates: "In Progress (1/10 completed)",
       location: "Coursera",
       description:
         "Foundational certification validating knowledge of AI concepts, Azure Machine Learning, and responsible AI practices.",
       image: "/ibm.png",
-      links: [],
+      links: [
+         {
+          title: "View Certification",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "https://www.credly.com/badges/b7730c14-96ee-4d82-88f3-362df3e59bc9/public_url",
+        }
+      ],
     },
     {
       title: "Huawei Certification: HCIP 5G",
