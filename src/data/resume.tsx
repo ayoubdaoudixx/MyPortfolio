@@ -211,7 +211,7 @@ export const DATA = {
         { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/" },
       ],
       image: "/project2.png",
-      video: "/project2.png",
+      video: "/ATS.mp4",
 
     },
     {
