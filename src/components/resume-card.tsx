@@ -43,12 +43,12 @@ export const ResumeCard = ({
   return (
     <Link
       href={href || "#"}
-      className="block cursor-pointer"
+      className="group block cursor-pointer"
       onClick={handleClick}
     >
-      <Card className="flex">
+      <Card className="flex rounded-xl p-2 -mx-2 transition-colors duration-300 ease-out hover:bg-accent/50">
         <div className="flex-none">
-          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground">
+          <Avatar className="border size-12 m-auto bg-muted-background dark:bg-foreground transition-transform duration-300 ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100">
             <AvatarImage
               src={logoUrl}
               alt={altText}
@@ -57,7 +57,7 @@ export const ResumeCard = ({
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>
-        <div className="flex-grow ml-4 items-center flex-col group">
+        <div className="flex-grow ml-4 items-center flex-col">
           <CardHeader>
             <div className="flex items-start justify-between gap-x-2">
               <div>

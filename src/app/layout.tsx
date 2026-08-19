@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import { ResumeButtons } from "@/components/ResumeButtons";
+import { ScrollProgress } from "@/components/scroll-progress";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
@@ -64,6 +65,7 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
+            <ScrollProgress />
             <ResumeButtons />
             <main className="pt-20 pb-12 sm:pt-32 sm:pb-24">
               {children}

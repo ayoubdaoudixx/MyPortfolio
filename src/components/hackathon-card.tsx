@@ -24,9 +24,9 @@ export function HackathonCard({
   links,
 }: Props) {
   return (
-    <li className="relative ml-10 py-4">
+    <li className="group relative ml-10 py-4 transition-transform duration-300 ease-out hover:translate-x-1 motion-reduce:transition-none motion-reduce:hover:translate-x-0">
       <div className="absolute -left-16 top-2 flex items-center justify-center bg-white rounded-full">
-        <Avatar className="border size-12 m-auto">
+        <Avatar className="border size-12 m-auto transition-all duration-300 ease-out group-hover:scale-105 group-hover:border-foreground/30 motion-reduce:transition-none motion-reduce:group-hover:scale-100">
           <AvatarImage src={image} alt={title} className="object-contain" />
           <AvatarFallback>{title[0]}</AvatarFallback>
         </Avatar>
@@ -54,7 +54,11 @@ export function HackathonCard({
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <Badge key={idx} title={link.title} className="flex gap-2">
+              <Badge
+                key={idx}
+                title={link.title}
+                className="flex gap-2 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md motion-reduce:transition-none motion-reduce:hover:translate-y-0"
+              >
                 {link.icon}
                 {link.title}
               </Badge>
