@@ -15,40 +15,48 @@ export const DATA = {
   avatarUrl: "/me.png",
 
   skills: [
-    "Python",
-    "JavaScript",
-    "TypeScript",
-    "Java",
-    "Scala",
-    "SQL",
-    "Spark",
-    "TensorFlow",
-    "PyTorch",
-    "Keras",
+    "LangChain",
+    "Hugging Face",
+    "RAG",
+    "Pinecone",
+    "FAISS",
+    "sentence-transformers",
+    "Prompt Engineering",
     "Scikit-Learn",
+    "XGBoost",
+    "PyTorch",
+    "TensorFlow",
     "Pandas",
     "NumPy",
-    "OpenCV",
-    "LangChain",
-    "LlamaIndex",
-    "Hugging Face",
-    "LLM",
-    "RAG",
-    "Azure",
+    "SMOTE",
+    "Optuna",
+    "SHAP",
     "AWS",
-    "Snowflake",
-    "Git",
+    "Azure",
+    "MLFlow",
+    "Kubeflow",
     "Docker",
-    "Streamlit",
-    "Dataiku",
-    "MLOps",
-    "SalesForce",
-    "Power BI",
-    "Tablaeu",
-    "SAS",
-    "Seaborn",
-    "Matplotlib",
-    "Dax",
+    "Kubernetes",
+    "Git",
+    "GitHub",
+    "GitLab",
+    "CI/CD",
+    "Jenkins",
+    "Python",
+    "TypeScript",
+    "JavaScript",
+    "SQL",
+    "Flask",
+    "Node.js",
+    "Next.js",
+    "React",
+    "NoSQL",
+    "PostgreSQL",
+    "MongoDB",
+    "Graph",
+    "Spark",
+    "Hadoop",
+    "ETL",
   ],
 
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
@@ -85,6 +93,18 @@ export const DATA = {
   },
 
   work: [
+    {
+      company: "MedCare — Freelance Project",
+      href: "https://med-care-red-pi.vercel.app/",
+      badges: [],
+      location: "Casablanca, Morocco",
+      title: "Full-Stack & AI Engineer",
+      logoUrl: "/MED.png",
+      start: "January 2026",
+      end: null,
+      description:
+        "Designed and developed a RAG medical assistant (LangChain, Pinecone, sentence-transformers embeddings) integrated into a live healthcare services platform. Developed a trilingual FR/AR/EN (full RTL) Next.js 16 application (React 19, TypeScript) with a multimodal conversational AI agent: RAG, function calling, STT/TTS, emergency detection, symptom triage and automated appointment booking. Deployed the application as containerized microservices with Docker on AWS and set up a CI/CD pipeline via GitHub Actions.",
+    },
     {
       company: "Lab-STICC — IMT Atlantique Brest",
       href: "https://imt-atlantique.fr",
@@ -167,7 +187,7 @@ export const DATA = {
     {
       school: "École Nationale Supérieure d'Arts et Métiers\n(ENSAM) Casablanca",
       href: "https://ensam-casa.ma",
-      degree: "Diplôme d’Ingénieur – Intelligence Artificielle & Génie Informatique",
+      degree: "Engineering Degree – Artificial Intelligence & Computer Engineering",
       logoUrl: "/ensam.png",
       start: "2019",
       end: "2024",
@@ -176,7 +196,7 @@ export const DATA = {
     {
       school: "Lycée Boumalne Dades",
       href: "#",
-      degree: "Diplôme de Baccalauréat Science Mathématique Option A",
+      degree: "Baccalaureate Diploma – Mathematical Sciences, Option A",
       logoUrl: "/school.png",
       start: "2018",
       end: "2019",
@@ -186,23 +206,24 @@ export const DATA = {
 
   projects: [
     {
-      title: "LinkedShoot.AI",
-      href: "https://www.linkedshoot.com/",
-      dates: "2025",
+      title: "MEDCARE",
+      href: "https://med-care-red-pi.vercel.app/",
+      dates: "2026",
       active: true,
       description:
-        "Application web utilisant Google Gemini AI pour transformer des photos en portraits professionnels LinkedIn. Développée avec React, TypeScript, et Supabase pour l’authentification et la gestion des utilisateurs, incluant un système de crédits via Lemon Squeezy et une interface PWA fluide et responsive..",
-      technologies: ["Gemini API", "Supabase", "Lemon Squeezy", "React", "TypeScript", "PWA"],
+        "Built a healthcare/patient management web app to streamline appointment scheduling, patient records, and care coordination with a responsive, user-friendly interface.",
+      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
       links: [
         { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/" },
       ],
-      image: "/linkedshot.png",
-      video: "/linkedshoot.mp4",
+      image: "/MED.png",
+      video: "/MEDCARE.mp4",
+
     },
     {
-      title: "ATS Resume Optimizer",
-      href: "#",
-      dates: "2024",
+      title: "Resumary",
+      href: "https://resumerai-puce.vercel.app/",
+      dates: "2025",
       active: true,
       description:
         "Created a web-based AI tool leveraging the Gemini API to analyze and optimize resumes for ATS compatibility, including PDF upload, OCR, and real-time editing.",
@@ -213,6 +234,20 @@ export const DATA = {
       image: "/project2.png",
       video: "/ATS.mp4",
 
+    },
+    {
+      title: "LinkedShoot.AI",
+      href: "https://www.linkedshoot.com/",
+      dates: "2024",
+      active: true,
+      description:
+        "Application web utilisant Google Gemini AI pour transformer des photos en portraits professionnels LinkedIn. Développée avec React, TypeScript, et Supabase pour l’authentification et la gestion des utilisateurs, incluant un système de crédits via Lemon Squeezy et une interface PWA fluide et responsive..",
+      technologies: ["Gemini API", "Supabase", "Lemon Squeezy", "React", "TypeScript", "PWA"],
+      links: [
+        { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/" },
+      ],
+      image: "/linkedshot.png",
+      video: "/linkedshoot.mp4",
     },
     {
       title: "Bankrupcty Predictor",
@@ -232,7 +267,7 @@ export const DATA = {
     {
       title: "MASI Index Performance Prediction",
       href: "https://masi-index-predictor.vercel.app/",
-      dates: "2023",
+      dates: "2024",
       active: true,
       description:
         "Developed forecasting models (ARIMA, SARIMA, LSTM) for predicting the Moroccan MASI index using market and macroeconomic data with Pandas, Matplotlib, and Seaborn.",
@@ -248,6 +283,21 @@ export const DATA = {
 
   // CERTIFICATIONS SECTION — repurposed from hackathons
   certification: [
+    {
+      title: "McKinsey Forward Programe",
+      dates: "Completed: 23 June 2026",
+      location: "McKinsey & Company",
+      description:
+        "Forward is a free multi-week learning program designed to equip individuals at different stages of their careers – from career starters to job changers – with practical skills to succeed in the future of work",
+      image: "/mckinsey.png",
+      links: [
+        {
+          title: "View Certification",
+          icon: <Icons.globe className="h-4 w-4" />,
+          href: "/mckinsey.pdf"
+        }
+      ],
+    },
     {
       title: "IBM Data Science Professional Certificate",
       dates: "In Progress (1/10 completed)",
