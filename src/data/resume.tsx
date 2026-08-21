@@ -8,9 +8,9 @@ export const DATA = {
   location: "Casablanca, Morocco",
   locationLink: "https://www.google.com/maps/place/Casablanca,+Morocco",
   description:
-    "Data Scientist & AI Engineer passionate about building intelligent data-driven systems and AI-powered applications.",
+    "AI Engineer & Data Scientist passionate about building intelligent data-driven systems and AI-powered applications.",
   summary:
-    "I am a Data Scientist and AI Engineer with hands-on experience in Machine Learning, NLP, Generative AI, and Cloud Computing. I’ve contributed to academic and industrial projects that leverage AI and automation to improve decision-making and optimize performance. My early background in customer service and extra-curricular activities helped me build strong analytical thinking and communication skills, which now complement my work as an AI engineer. My goal is to design innovative and scalable AI solutions for real-world challenges.",
+    "I am an AI Engineer & Data Scientist with hands-on experience in Machine Learning, NLP, Generative AI, and Cloud Computing. I’ve contributed to academic and industrial projects that leverage AI and automation to improve decision-making and optimize performance. My early background in customer service and extra-curricular activities helped me build strong analytical thinking and communication skills, which now complement my work as an AI engineer. My goal is to design innovative and scalable AI solutions for real-world challenges.",
 
   avatarUrl: "/me.png",
 
@@ -214,7 +214,7 @@ export const DATA = {
         "Built a healthcare/patient management web app to streamline appointment scheduling, patient records, and care coordination with a responsive, user-friendly interface.",
       technologies: ["React", "TypeScript", "Node.js", "PostgreSQL"],
       links: [
-        { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/" },
+        { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/ayoubdaoudixx/MedCare" },
       ],
       image: "/MED.png",
       video: "/MEDCARE.mp4",
@@ -226,10 +226,10 @@ export const DATA = {
       dates: "2025",
       active: true,
       description:
-        "Created a web-based AI tool leveraging the Gemini API to analyze and optimize resumes for ATS compatibility, including PDF upload, OCR, and real-time editing.",
-      technologies: ["Gemini API", "Python", "Streamlit", "OCR"],
+        "Created a web-based AI tool leveraging the Claude Sonnet 4.6 to analyze and optimize resumes for ATS compatibility, including PDF upload, OCR, and real-time editing alongside with matching jobs fetched using JSearch API.",
+      technologies: ["Claude Sonnet 4.6", "JSearch API", "Cosine Similarity", "Python", "Streamlit", "OCR"],
       links: [
-        { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/" },
+        { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/ayoubdaoudixx/resume-ai-analyzer" },
       ],
       image: "/project2.png",
       video: "/ATS.mp4",
@@ -244,7 +244,7 @@ export const DATA = {
         "Application web utilisant Google Gemini AI pour transformer des photos en portraits professionnels LinkedIn. Développée avec React, TypeScript, et Supabase pour l’authentification et la gestion des utilisateurs, incluant un système de crédits via Lemon Squeezy et une interface PWA fluide et responsive..",
       technologies: ["Gemini API", "Supabase", "Lemon Squeezy", "React", "TypeScript", "PWA"],
       links: [
-        { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/" },
+        { icon: <Icons.github className="h-3 w-3" />, type: "GitHub", href: "https://github.com/ayoubdaoudixx/LinkedShots" },
       ],
       image: "/linkedshot.png",
       video: "/linkedshoot.mp4",
