@@ -92,18 +92,30 @@ export const DATA = {
     },
   },
 
-  work: [
-    {
+  work: [ {
       company: "MedCare — Freelance Project",
       href: "https://med-care-red-pi.vercel.app/",
       badges: [],
       location: "Casablanca, Morocco",
-      title: "Full-Stack & AI Engineer",
+      title: "Full-Stack & AI Engineer (Remote)",
       logoUrl: "/MED.png",
-      start: "January 2026",
-      end: null,
+      start: "Mars 2026",
+      end: "September 2026",
       description:
         "Designed and developed a RAG medical assistant (LangChain, Pinecone, sentence-transformers embeddings) integrated into a live healthcare services platform. Developed a trilingual FR/AR/EN (full RTL) Next.js 16 application (React 19, TypeScript) with a multimodal conversational AI agent: RAG, function calling, STT/TTS, emergency detection, symptom triage and automated appointment booking. Deployed the application as containerized microservices with Docker on AWS and set up a CI/CD pipeline via GitHub Actions.",
+    },
+    
+    {
+      company: "Friends Enginering",
+      href: "",
+      badges: [],
+      location: "Casablanca, Morocco",
+      title: "AI & Automation Engineer (Remote)",
+      logoUrl: "/friends.jfif",
+      start: "November 2024",
+      end: "Mars 2026",
+      description:
+        "Built an AI-powered email triage system (n8n, OpenAI API, Gmail API) for FR/AR emails, automating classification, urgency detection and daily Telegram reports, achieving 94% accuracy. Developed an internal RAG knowledge assistant (LangChain, Qdrant, FastAPI) with hybrid search, reranking and source citations, adopted by 8 engineers. Delivered a bilingual FR/AR Next.js website with integrated lead automation and SEO, achieving 95+ Lighthouse scores.",
     },
     {
       company: "Lab-STICC — IMT Atlantique Brest",
@@ -283,6 +295,13 @@ export const DATA = {
 
   // CERTIFICATIONS SECTION — repurposed from hackathons
   certification: [
+     {
+      title: "Azure AI Apps and Agents Developer Associate",
+      dates: "In Progress",
+      location: "Microsoft",
+      description:"Validated expertise in designing, deploying, and managing generative AI applications, Retrieval-Augmented Generation (RAG) pipelines, and multi-agent orchestration workflows on Microsoft Azure using Python and Microsoft Foundry",
+      image: "/azure.webp",
+    },
     {
       title: "McKinsey Forward Programe",
       dates: "Completed: 23 June 2026",

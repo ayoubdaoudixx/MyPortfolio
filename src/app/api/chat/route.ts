@@ -135,7 +135,7 @@ Remember: You are Ayoub Daoudi speaking directly to the visitor.`;
 
     // Call Groq API
     const completion = await groq.chat.completions.create({
-      model: "openai/gpt-oss-120b", // Using Llama 3.3 70B for fast, high-quality responses
+      model: "qwen/qwen3.8-27b", // Using Llama 3.3 70B for fast, high-quality responses
       messages: groqMessages,
       temperature: 0.7,
       max_tokens: 500,
